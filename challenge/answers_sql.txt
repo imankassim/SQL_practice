@@ -20,4 +20,24 @@ SAKILA CHALLENGE SQL
 19) SELECT name, title FROM film AS f RIGHT OUTER JOIN film_category AS fc ON f.film_id = fc.film_id LEFT OUTER JOIN category AS c ON fc.category_id = 
 c.category_id WHERE name = "Horror";
 20) SELECT first_name, last_name FROM staff WHERE staff_id = 2;
+21) SELECT ai.first_name, ai.last_name, f.title FROM actor_info AS ai LEFT OUTER JOIN film_actor AS fa ON ai.actor_id = fa.actor_id LEFT OUTER JOIN film AS f ON fa.film_id = f.film_id WHERE first_name = "Fred" AND last_name = "Costner";
+22) SELECT COUNT(DISTINCT country) FROM country;
+23) SELECT DISTINCT name FROM language ORDER BY name DESC;
+24) SELECT first_name, last_name FROM actor WHERE last_name LIKE "%son" ORDER BY first_name ASC;
+25) SELECT name, COUNT(film_id) FROM film_category LEFT JOIN category ON film_category.category_id = category.category_id GROUP BY name;
 
+
+WORD CHALLENGE SQL
+1) SELECT DISTINCT COUNT(name) FROM city WHERE CountryCode = "USA";
+2) SELECT Name, Population, LifeExpectancy FROM country WHERE Name = "Argentina";
+3) SELECT name, lifeExpectancy FROM country WHERE lifeExpectancy IS NOT NULL ORDER BY lifeExpectancy DESC LIMIT 1;
+4) SELECT country.name, city.name FROM city JOIN country ON city.id = country.capital WHERE country.name = "Spain";  
+5) SELECT language, country.Region FROM countrylanguage RIGHT OUTER JOIN country ON countrylanguage.CountryCode = country.code GROUP BY language HAVING region = "Southeast Asia";
+6) SELECT name from city WHERE name LIKE "f%" LIMIT 25;
+7) SELECT count(CountryCode) FROM city JOIN country ON city.CountryCode = country.code WHERE country.name = "China";
+8) SELECT name, population FROM country WHERE population IS NOT NULL AND population != 0  ORDER BY population ASC LIMIT 
+1;
+9) SELECT COUNT(DISTINCT name) FROM country;
+10) SELECT name, SurfaceArea FROM country ORDER BY SurfaceArea DESC LIMIT 10;
+11) SELECT country.name, city.name, city.population FROM city JOIN country ON city.CountryCode = country.code WHERE country.name = "Japan" ORDER BY city.population DESC LIMIT 5;
+12) 
