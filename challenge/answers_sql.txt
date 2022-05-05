@@ -54,4 +54,9 @@ country.code GROUP BY country.name ORDER BY COUNT(language) DESC LIMIT 10;
 
 
 MOVIELENS CHALLENGE SQL
-1) 
+1) SELECT * FROM movies WHERE release_date BETWEEN "1983-01-01" AND "1993-01-01" ORDER BY release_date;
+2) SELECT title, AVG(ratings.rating) FROM movies JOIN ratings ON movies.id = ratings.movie_id GROUP BY title HAVING AVG(ratings.rating) = (SELECT MIN(rating) FROM ratings);
+3) SELECT m.id, m.title FROM movies as m JOIN genres_movies as gm ON gm.movie_id = m.id JOIN genres as g ON g.id = gm.genre_id JOIN ratings as r ON r.movie_id = m.id JOIN users as u 
+ON u.id = r.user_id JOIN occupations as o ON o.id = u.occupation_id WHERE g.name = "Sci-fi" AND u.age = 24 AND u.gender = "M" AND o.name = "student" AND r.rating = 5;
+4) SELECT title FROM movies WHERE release_date = (SELECT release_date FROM movies GROUP BY release_date ORDER BY COUNT(*) DESC LIMIT 1);
+5) SELECT g.name, COUNT(m.title) FROM movies as m JOIN genres_movies AS gm ON m.id = gm.movie_id JOIN genres AS g ON g.id = gm.genre_id GROUP BY g.name ORDER BY COUNT(m.title) DESC;

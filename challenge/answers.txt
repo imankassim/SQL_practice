@@ -49,4 +49,8 @@ WORD CHALLENGE SQL
 
 
 MOVIELENS CHALLENGE SQL
-1) 
+1) 283 rows
+2) 69 rows
+3) 57 rows
+4) 215 rows. years all = 1995
+5) 18 rows, top = Drama (725), bottom = Fantasy (22)
