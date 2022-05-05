@@ -12,5 +12,12 @@ SAKILA CHALLENGE SQL
 11) SELECT last_name, COUNT(*) FROM actor GROUP BY last_name HAVING COUNT(*) = 1 ORDER BY last_name DESC;
 12) SELECT last_name, COUNT(*) FROM actor GROUP BY last_name HAVING COUNT(*) != 1 ORDER BY COUNT(*) DESC;
 13) SELECT t.actor_id, t.first_name, t.last_name, t.film_id, COUNT(*) FROM (SELECT film_actor.actor_id, film_id, first_name, last_name FROM film_actor JOIN actor_info ON film_actor.actor_id = actor_info.actor_id) as t GROUP BY t.actor_id ORDER BY COUNT(*) DESC LIMIT 1;
-
+14) SELECT r.rental_id, r.rental_date, r.return_date, f.film_id, f.title FROM rental AS r LEFT OUTER JOIN inventory AS i ON r.inventory_id = i.inventory_id LEFT OUTER JOIN film AS f ON i.film_id = f.film_id WHERE f.title LIKE '%academy%'  ORDER BY return_date DESC LIMIT 5;
+15) SELECT AVG(length) FROM film;
+16) SELECT name, AVG(length) FROM film AS f RIGHT OUTER JOIN film_category AS fc ON f.film_id = fc.film_id LEFT OUTER JOIN category AS c ON fc.category_id = c.category_id GROUP BY c.category_id;
+17) SELECT * FROM film_text WHERE description LIKE '%robot%';
+18) SELECT COUNT(*) FROM film WHERE release_year = 2010;    
+19) SELECT name, title FROM film AS f RIGHT OUTER JOIN film_category AS fc ON f.film_id = fc.film_id LEFT OUTER JOIN category AS c ON fc.category_id = 
+c.category_id WHERE name = "Horror";
+20) SELECT first_name, last_name FROM staff WHERE staff_id = 2;
 

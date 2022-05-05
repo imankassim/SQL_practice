@@ -11,3 +11,10 @@
 11) 66 rows
 12) 55 rows
 13) Gina Degeneres (62 films)
+14) 2005-08-30 22:26:43 (rental_ID = 14714)
+15) 115.2720
+16) 16 rows, with answers ranging from 111.6 - 113.3
+17) 77 rows
+18) 0
+19) 56 rows
+20) Jon Stephens
