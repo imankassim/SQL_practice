@@ -32,4 +32,21 @@ WORD CHALLENGE SQL
 4) Madrid
 5) 42 Rows
 6) 25 Rows
-7) 
+7) 363 cities
+8) Pitcairn, population = 50
+9) 239
+10) 10 rows, top = Russian Federation, bottom = Kazakstan
+11) 5 rows, Tokyo at top (7980230), Sapporo at bottom (1790886)
+12) 35 rows
+13) 10 rows, top = Greenland, bottom = Suriname
+14) 457 rows
+15) 10 rows, top = US, bottom = Spain
+16) China, India, Canada, US, Russia, Tanzania, SA, Nigeria, Iran, Kenya
+17) 10 Rows
+18) Zambia - 37.2%
+19) 3 rows, Republic (122), Constitutional Monarchy (29) and Federal Republic (15)
+20) 192
+
+
+MOVIELENS CHALLENGE SQL
+1) 
